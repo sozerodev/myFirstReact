@@ -5,6 +5,8 @@ import React, { Component } from "react";
 class Subject extends Component {
   render() {
     // render라는 함수
+    console.log("Subject render");
+
     return (
       // 주의** 하나의 최상위 태그만 사용 가능하다.
       // 여기서 하나의 최상위 태그는 header 태그이다.
@@ -13,7 +15,9 @@ class Subject extends Component {
       // JSX로 코드를 작성하면 create-react-app이 알아서
       // JS코드로 converting해주는 것.
       <header>
-        <h1>{this.props.title}</h1>
+        <h1>
+          <a href="/">{this.props.title}</a>
+        </h1>
         {this.props.sub}
       </header>
     );
